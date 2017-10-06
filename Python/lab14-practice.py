@@ -75,15 +75,24 @@ def maximum(bums):
     return max_value
 print(maximum([10, 43, 65, 21, 99, 25]))
 
-# incomplete
-def mean(bums):
-    print(bums)
-    mean_value = list+list/sum
-    for bums in bums:
-        if bums > mean:
-            mean_value = bums
-    return mean_value
-print(mean([10, 43, 65, 21, 99, 25]))
+# computes the average of a list
+def average_numbers(bums):
+    total = 0
+    for bum in bums:
+        total += bum
+    return total/len(bums)
+
+print(average_numbers([10, 43, 65, 21, 99, 25]))
+
+
+# returns the reverse of a list
+array = [10, 43, 65, 21, 99, 25]
+def reverse(array):
+    for i in reversed(array):
+        return(array)
+
+
+print(array(reverse))
 
 
 
