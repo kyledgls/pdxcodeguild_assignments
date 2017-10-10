@@ -48,7 +48,7 @@ for i in range(100000):
 
 print(f"You've spent ${cost} on tickets.")
 print(f"Your earnings so far are ${winnings}.")
-
+print(f"Your Return on investment is ${cost - winnings/cost}")
 
 
 
