@@ -21,7 +21,7 @@ elif x < 20:
 elif x < 99:
     print(tens[tens_digit - 2], ones[ones_digit])
 elif x < 999:
-    print(hundos[hundreds_digit], ones[ones_digit-10])
+    print(hundos[hundreds_digit-1], ones[ones_digit-10])
 
 
 
