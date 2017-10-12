@@ -10,3 +10,7 @@ while i < 12:
     i += 1
 random.choice(x)
 print(password)
+
+
+
+
