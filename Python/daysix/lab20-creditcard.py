@@ -1,27 +1,31 @@
 print('Welcome to the credit card validator')
 
 
-
+# defines the function
 def credit_valid():
-    card1 = input('Input credit card: ')
-    card1 = card1.replace(' ', '')
-    card1 = list(card1)
-    for i in range(len(card1)):
-        card1[i] = int(card1[i])
-
-    numcheck = card1.pop(15)
-    card1.reverse()
-    for i in range(0, len(card1), 2):
-        #print(card1, i)
-        card1[i] *= 2
-    for i in range(len(card1)):
-        if card1[i] > 9:
-            i -= 9
-
-    for i in range(len(card1)):
-        i += len(card1)
-        if numcheck == card1[1]:
-            print('Valid!')
+    card = input('Input credit card: ')
+    card = card.replace(' ', '')
+    card = list(card)
+    # removes the last character in the card number
+    for i in range(len(card)):
+        card[i] = int(card[i])
+    numcheck = card.pop(15)
+    # reverses the card numbers
+    card.reverse()
+    # multiplies every other indicies by two
+    for i in range(0, len(card), 2):
+        print(card, i)
+        card[i] *= 2
+    total = 0
+    # subtracts all values over 9 by 9
+    for i in range(len(card)):
+        if card[i] > 9:
+            card[i] -= 9
+        total += card[i]
+    # verifies the last digit with the sum of all numbers by checing the second digit
+    ones_digit = total % 10
+    if numcheck == ones_digit:
+        print('Valid!')
     else:
         print('CUT UP THE CARD!')
 
