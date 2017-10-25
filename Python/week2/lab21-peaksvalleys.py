@@ -33,6 +33,11 @@ print('peaks: ', peaks)
 print('valleys: ', valleys)
 
 
+for i in range(1, len(data)):
+
+
+
+
 
 
 
