@@ -26,9 +26,14 @@ for sock_type in sorted_laundry:
     if sorted_laundry[sock_type]%2 == 1:
         lone_rangers[sock_type] = 1
 
+sock_pairs = {}
+
+for sock_type in sorted_laundry:
+    sock_pairs[sock_type] = sorted_laundry[sock_type]//2
+    lone_rangers[sock_type] = sorted_laundry[sock_type]%2
 
 
 print(sorted_laundry)
 print(lone_rangers)
-
+print(sock_pairs)
 
