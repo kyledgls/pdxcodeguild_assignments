@@ -22,9 +22,7 @@ for sock in laundry:
         sorted_laundry[sock] += 1
 
 
-for sock_type in sorted_laundry:
-    if sorted_laundry[sock_type]%2 == 1:
-        lone_rangers[sock_type] = 1
+
 
 sock_pairs = {}
 
