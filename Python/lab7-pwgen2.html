@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="pwgen" content="password generator">
+    </head>
+    <body>
+        <script>
+            let pwchar = "1234567890!@#$%^&*()";
+            let text = "";
+            let loopEnd = Math.floor(10+Math.random() * 10);
+            for (let i = 0; i < loopEnd; i++) {
+                let index = Math.floor(Math.random()*pwchar.length);
+                text += pwchar[index];
+            }
+            alert(text);
+        </script>
+
+    </body>
+</html>
