@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="description" content="anagram">
+</head>
+<body>
+    <!--takes user input-->
+    <input type="text" id="inputword1"/>
+    <input type="text" id="inputword2"/>
+    <button id="bt">Submit</button>
+
+    <p id="demo"></p>
+
+
+    <script>
+
+        let bt = document.getElementById('bt');
+        bt.onclick = function() {
+            var word1 = document.getElementById("inputword1").value;
+            var word2 = document.getElementById("inputword2").value;
+            //document.getElementById("demo").innerHTML = userInput;
+            if (word1 === word2)
+                alert('ANAGRAM!');
+            else
+                alert('Not an ANAGRAM!');
+        };
+
+
+    </script>
+
+
+    </body>
+</html>
