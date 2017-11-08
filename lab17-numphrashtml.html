@@ -1,36 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="description" content="Number Phrase converter">
-    <link rel="stylesheet" type="text/css" href="Style">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<input type="text" id="inputword" placeholder="number from 0-99"/>
+<button id="bt">Submit</button>
+
 
 <script>
     let ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     let teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
     let tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
-    let hundos = ['one hundred', 'two hundred', 'three hundred', 'four hundred', 'five hundred', 'six hundred', 'seven hundred',
-        'eight hundred', 'nine hundred'];
-
-    let x = 14;
-    let tens_digit = Math.floor(x/10)%10;
-    let ones_digit = x%10;
-    let hundreds_digit = Math.floor(x/100);
 
 
-    if (x < 10) {
-        alert(ones[ones_digit])
-    } else if (x < 20) {
-        alert(teens[ones_digit-10])
-    } else if (x < 99) {
-        alert(tens[tens_digit-2] + ones[ones_digit])
-    } else if (x < 999) {
-        alert(hundos[hundreds_digit - 1] +''+ ones[ones_digit])
-    }
+    let bt = document.getElementById('bt');
+    bt.onclick = function () {
+        let x = document.getElementById("inputword").value;
+        let tens_digit = Math.floor(x / 10) % 10;
+        let ones_digit = x % 10;
+
+        if (x < 10) {
+            document.write(ones[ones_digit])
+        } else if (x < 20) {
+            document.write(teens[ones_digit - 10])
+        } else if (x < 99) {
+            document.write(tens[tens_digit - 2] + ones[ones_digit])
+        }
+    };
+
 
 </script>
 
