@@ -7,8 +7,9 @@
 <body>
 <script>
     setTimeout(function(){
-        window.location = 'https://www.hillaryclinton.com/';
-    }, 3000);
+        let sites = ['https://www.hillaryclinton.com/', 'http://www.plannedparenthood.org'];
+        window.location = sites[Math.floor((Math.random() * 2))];
+    }, 5000)
 </script>
 </body>
 </html>
