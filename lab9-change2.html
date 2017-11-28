@@ -3,6 +3,7 @@
     <body>
         <input type="text" id="inputword1" placeholder="how many pennies?"/>
         <button id="bt">CALCULATE</button>
+        <div id="outputdiv"></div>
         <script>
             let inputword1 = document.getElementById('inputword1');
             let bt = document.getElementById('bt');
@@ -14,7 +15,15 @@
                 cents -= dimes * 10;
                 let nickle = Math.floor(cents / 5);
                 cents -= nickle * 5;
-                document.write('quarters: '+ quarters + ' '  + 'dimes: '+ dimes + ' '+'nickle: ' + ' ' + nickle + ' ' +'pennies:' + cents);
+
+                let output_div = document.getElementById('outputdiv');
+
+                let little_div = document.createElement('div');
+                little_div.innerText =  ('quarters: '+ quarters + ' '  + 'dimes: '+ dimes + ' '+'nickle: ' + ' ' + nickle + ' ' +'pennies:' + cents);
+                output_div.appendChild(little_div);
+
+
+                //outputdiv.innerText = ('quarters: '+ quarters + ' '  + 'dimes: '+ dimes + ' '+'nickle: ' + ' ' + nickle + ' ' +'pennies:' + cents);
 
             };
 

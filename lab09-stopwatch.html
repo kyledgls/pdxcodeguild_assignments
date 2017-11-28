@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="description" content="STOP WATCH">
+
+    </head>
+    <body>
+        <button id="bt">STOP!</button>
+        <button id="butt">START</button>
+        <div id="clock_div"></div>
+        <script>
+            var myVar = setInterval(myTimer, 1000);
+
+            function myTimer() {
+                let d = new Date();
+                document.getElementById("clock_div").innerHTML = d.toLocaleTimeString();
+            }
+
+            let bt = document.getElementById('bt');
+            bt.onclick = function () {
+                alert('!!!!');
+            };
+
+            let butt = document.getElementById('butt');
+            butt.onclick = function () {
+                alert('!!!@');
+            };
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

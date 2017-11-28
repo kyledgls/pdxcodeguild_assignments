@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="description" content="user api">
+    </head>
+    <body>
+        <script>
+            function http_get(url, success) {
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        let data = JSON.parse(xhttp.responseText);
+                        success(data);
+                    }
+                };
+                xhttp.open("GET", url);
+                xhttp.send();
+            }
+
+            http_get('https://reqres.in/api/users?page=1', function(data) {
+                let users = data.data;
+                console.log(users[0].first_name);
+                //console.log(data.total_pages);
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    </body>
+</html>

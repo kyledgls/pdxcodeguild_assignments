@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="description" content="Description">
+        <div id="centertext"></div>
+
+    </head>
+    <body>
+    <div id="outputdiv"></div>
+        <script>
+            function http_get(url, success) {
+                let xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState === 1) {
+                        xhttp.setRequestHeader('Authorization', 'Token token="daa4bb04d24c22203bc8c1dfaa36be6e"')
+                    } else if (this.readyState === 4 && this.status === 200) {
+                        let data = JSON.parse(xhttp.responseText);
+                        success(data);
+                    } else if (this.readyState === 4 && this.status === 404) {
+                        // handle 404
+                    }
+                };
+                xhttp.open("GET", url);
+                xhttp.send();
+            }
+
+
+
+
+            function success(data) {
+                let output_div = document.getElementById('outputdiv');
+                console.log(data);
+                let author = data.quote.author;
+                let quote = data.quote.body;
+                output_div.innerText(quote + ' - ' + author);
+            }
+
+            let url = 'https://favqs.com/api/qotd';
+            http_get(url, success);
+        </script>
+    </body>
+</html>

@@ -8,8 +8,8 @@
 <script>
     setTimeout(function(){
         let sites = ['https://www.hillaryclinton.com/', 'http://www.plannedparenthood.org'];
-        window.location = sites[Math.floor((Math.random() * 2))];
-    }, 5000)
+        window.location = sites[Math.floor((Math.random() * sites.length))];
+    }, 5000);
 </script>
 </body>
 </html>
