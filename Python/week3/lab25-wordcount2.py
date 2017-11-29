@@ -8,6 +8,7 @@ with open("11-0.txt", "r") as file:
     for char in ",.:;'\"[]{}()!?":
         contents = contents.replace(char, '')
     words = contents.split(' ')
+
     # iterates over words
     word_set = {}
     for word in words:
@@ -17,6 +18,7 @@ with open("11-0.txt", "r") as file:
             word_set[word] = 1
         else:
             word_set[word] += 1
+
     # counts the word pairs.
     pair_set = {}
     for i in range(len(words) - 1):

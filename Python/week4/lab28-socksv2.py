@@ -11,7 +11,7 @@ laundry = []
 while i < 100:
     laundry.append(random.choice(sock_types))
     i += 1
-print(laundry)
+#print(laundry)
 
 sorted_laundry = {}
 lone_rangers = {}

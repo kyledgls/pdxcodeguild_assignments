@@ -25,6 +25,7 @@ class ATMAccount:
 
     # checks the withdrawal amount
     def check_withdrawal(self, amount):
+        #return amount < self.bal
         if self.bal < amount:
             return False
         else:

@@ -2,7 +2,7 @@
 
 
 
-x = 375
+x = 85
 tens_digit = x//10
 ones_digit = x%10
 hundreds_digit = x//100
